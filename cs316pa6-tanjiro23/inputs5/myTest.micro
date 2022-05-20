@@ -1,0 +1,18 @@
+PROGRAM step4
+BEGIN
+
+	INT i, j;
+
+	FUNCTION VOID main()
+	BEGIN
+
+		FOR (i := 0; i != 10; i := i+1)
+			WRITE (i);
+			IF (i = 5)
+				BREAK;
+			FI
+			WRITE (i);
+			WRITE (j);
+		ROF
+	END
+END

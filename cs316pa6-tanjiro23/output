@@ -1,0 +1,141 @@
+str eol "\n"
+str input "Please input an integer number: "
+str space " "
+push
+push r0
+push r1
+push r2
+push r3
+jsr main
+sys halt
+label F 
+link 5 
+move 2 r0 
+move r0 r1 
+move r1 r2 
+cmpi $6 r2 
+jle LABEL1 
+push  
+move 1 r3 
+move r3 r4 
+move $6 r5 
+subi r4 r5 
+push r5 
+push r0 
+push r1 
+push r2 
+push r3 
+jsr F 
+pop r3 
+pop r2 
+pop r1 
+pop r0 
+pop  
+pop r6 
+move r6 r7 
+move r7 $-1 
+push  
+move 2 r8 
+move r8 r9 
+move $6 r10 
+subi r9 r10 
+push r10 
+push r0 
+push r1 
+push r2 
+push r3 
+jsr F 
+pop r3 
+pop r2 
+pop r1 
+pop r0 
+pop  
+pop r11 
+move r11 r12 
+move r12 $-2 
+move $-1 r13 
+addi $-2 r13 
+move r13 $7 
+unlnk  
+ret  
+jmp LABEL2 
+label LABEL1 
+move 0 r14 
+move r14 r15 
+move r15 r16 
+cmpi $6 r16 
+jne LABEL3 
+move 0 r17 
+move r17 r18 
+move r18 $7 
+unlnk  
+ret  
+jmp LABEL4 
+label LABEL3 
+move 1 r19 
+move r19 r20 
+move r20 r21 
+cmpi $6 r21 
+jne LABEL5 
+move 1 r22 
+move r22 r23 
+move r23 $7 
+unlnk  
+ret  
+jmp LABEL6 
+label LABEL5 
+move 1 r24 
+move r24 r25 
+move r25 $7 
+unlnk  
+ret  
+label LABEL6 
+label LABEL4 
+label LABEL2 
+label main 
+link 5 
+sys writes input 
+sys readi $-2 
+move 0 r26 
+move r26 r27 
+move r27 r28 
+move r28 $-1 
+label LABEL7 
+move $-2 r29 
+move $-2 r30 
+cmpi $-1 r30 
+jeq LABEL8 
+push  
+push $-1 
+push r0 
+push r1 
+push r2 
+push r3 
+jsr F 
+pop r3 
+pop r2 
+pop r1 
+pop r0 
+pop  
+pop r31 
+move r31 r32 
+move r32 $-3 
+sys writei $-1 
+sys writes space 
+sys writei $-3 
+sys writes eol 
+label LABEL-1 
+move 1 r33 
+move r33 r34 
+move $-1 r35 
+addi r34 r35 
+move r35 r36 
+move r36 $-1 
+jmp LABEL7 
+label LABEL8 
+move 0 r37 
+move r37 r38 
+move r38 $6 
+unlnk  
+ret  
+end

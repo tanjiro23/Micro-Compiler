@@ -1,0 +1,25 @@
+PROGRAM step4
+BEGIN
+
+	INT enough;
+	FLOAT diff, tolerance;
+
+	FUNCTION VOID main()
+	BEGIN
+
+		enough := 0;
+		diff := 1.0;
+		tolerance := 2.0;
+		IF (diff > 0.0)
+			IF (diff < tolerance)
+					enough := 1;
+			FI
+		ELSE
+			IF (diff > (0.0 - tolerance))
+					enough := 1;
+			FI
+		FI
+
+		WRITE (enough);
+	END
+END
