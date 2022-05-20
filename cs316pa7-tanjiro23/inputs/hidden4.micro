@@ -1,0 +1,29 @@
+PROGRAM self1
+BEGIN
+    
+    FUNCTION FLOAT add(FLOAT a, FLOAT b)
+    BEGIN
+        FLOAT result;
+        result := a + b;
+        RETURN result;
+    END
+
+    FUNCTION INT main ()
+    BEGIN    
+        FLOAT a,b,c,d,e,f,g,h,i,j;
+        FLOAT avg;
+        a := 1;
+        b := 2;
+        c := 3;
+        d := 4;
+        e := 5;
+        f := 6;
+        g := 7;
+        h := 8;
+        i := 9;
+        j := 10;
+        avg := add(a,add(b,add(c,add(d,add(e,add(f,add(g,add(h,add(i,j)))))))));
+        WRITE(avg);
+        RETURN 0;
+    END
+END

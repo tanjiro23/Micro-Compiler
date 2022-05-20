@@ -1,0 +1,34 @@
+PROGRAM factorial
+BEGIN
+    STRING space := " ";
+    STRING divi := "/";
+    STRING star := "*";
+    STRING plus := "+";
+    STRING equal := "=";
+    
+    FUNCTION FLOAT division (FLOAT a, FLOAT b)
+    BEGIN
+        FLOAT result;
+        result := a/b;
+        RETURN result;
+    END
+
+    FUNCTION FLOAT multiply (FLOAT a, FLOAT b)
+    BEGIN
+        FLOAT result;
+        result := a*b;
+        RETURN result;
+    END
+    
+    FUNCTION INT main ()
+    BEGIN
+        FLOAT a,b,c;
+        FLOAT result;
+        a := 2.435;
+        b := 4.897;
+        c := 0.654;
+        result := multiply(a,b) + division(b,c);
+        WRITE(a,star,b,space,plus,space,b,divi,c,space,equal,space,result);
+        RETURN 0;
+    END
+END

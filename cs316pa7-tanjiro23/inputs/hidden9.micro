@@ -1,0 +1,40 @@
+PROGRAM p
+BEGIN
+
+    INT a,b,k,g,p,u;
+    STRING sp := " ";
+
+    FUNCTION VOID main()
+    BEGIN
+
+        b := 1;
+            a := 1;
+            FOR( ; a <= 120; a := a + 20) 
+            IF (b = 1)
+                g := 1*a;
+                WRITE (g,sp);
+            ELSE
+                IF (b = 2)
+                    b := b + 1;
+                    CONTINUE;
+                    p := 2*a;
+                    WRITE (p,sp);
+                ELSE
+                    IF (b = 3)
+                        k := 3*a;
+                           WRITE (k,sp);
+                    FI
+                        IF (b = 4)
+                            b := b + 1;
+                            BREAK;
+                            u := 4*a;
+                            WRITE (u,sp);
+                        FI  
+                FI        
+            FI
+                    b := b + 1;
+            ROF
+            WRITE (a);
+            RETURN 0;
+    END
+END

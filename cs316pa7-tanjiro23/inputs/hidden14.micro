@@ -1,0 +1,25 @@
+PROGRAM hello
+BEGIN
+	
+	FUNCTION INT func(INT arg1)
+	BEGIN
+	  	INT p;
+		p := 1;
+		RETURN p;
+	END
+	FUNCTION INT func2(INT arg1)
+	BEGIN
+		RETURN arg1;
+	END
+	
+	FUNCTION INT main ()
+	BEGIN
+		INT arg1,arg2,result;
+		arg1 := 5;
+		arg2 := 6;
+		result := 0;
+		result := func(func2(arg1))+func(func2(arg2));
+		WRITE(result);
+		RETURN 0;
+	END
+END

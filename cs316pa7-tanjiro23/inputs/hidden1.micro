@@ -1,0 +1,30 @@
+PROGRAM self1
+BEGIN
+    
+    FUNCTION FLOAT printF(FLOAT a, FLOAT b, FLOAT c, FLOAT d, FLOAT e, FLOAT f, FLOAT g, FLOAT h, FLOAT i, FLOAT j)
+    BEGIN
+        STRING sp := " ";
+        a := a + 2.0;
+        WRITE(a,sp,b,sp,c,sp,d,sp,e,sp,f,sp,g,sp,h,sp,i,sp,j);
+        RETURN 0.1;
+    END
+
+    FUNCTION INT main ()
+    BEGIN    
+        FLOAT avg;
+        FLOAT a,b,c,d,e,f,g,h,i,j;
+        STRING space := " ";
+        a := 1;
+        b := 2;
+        c := 3;
+        d := 4;
+        e := 5;
+        f := 6;
+        g := 7;
+        h := 8;
+        i := 9;
+        j := 10;
+        avg := printF(a, b, c, d, e, f, g, h, i, j);
+        RETURN 0;
+    END
+END

@@ -1,0 +1,31 @@
+PROGRAM hello
+BEGIN
+	
+	FUNCTION FLOAT Func(FLOAT arg1, FLOAT arg2, FLOAT arg3, FLOAT arg4, FLOAT arg5, FLOAT arg6, FLOAT arg7, FLOAT arg8, FLOAT arg9, FLOAT arg10)
+	BEGIN
+	  	FLOAT returnValue;
+		returnValue := 0.0;
+		returnValue := arg1+arg2+arg3+arg4+arg5+arg6+arg7+arg8+arg9+arg10;
+		RETURN returnValue;
+	END
+
+	
+	FUNCTION INT main ()
+	BEGIN
+		FLOAT arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,result;
+		arg1 := 1.0;
+		arg2 := 1.0;
+		arg3 := 1.0;
+		arg4 := 1.0;
+		arg5 := 1.0;
+		arg6 := 1.0;
+		arg7 := 1.0;
+		arg8 := 1.0;
+		arg9 := 1.0;
+		arg10 := 1.0;
+		result := 0.0;
+		result := Func(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10);
+		WRITE(result);
+		RETURN 0;
+	END
+END
